@@ -1,0 +1,31 @@
+<div class="popup-login">
+	<div class="popup-login-nav">
+		<a href="#login" class="mp-popup-login active">Вход</a>
+		<a href="#register" class="mp-popup-registration">Регистрация</a>
+	</div>
+	<div class="popup-login-social">
+		<a href="" class="vk">Войти с Вконтакте</a>
+		<a href="" class="fb">Войти с Facebook</a>
+	</div>
+	<form method="POST" action="https://autoreview.ru/login" accept-charset="UTF-8" class="popup-login-form">
+		<input name="_token" type="hidden" value="BRTPlFrvegpTgmAbSzskG6A2hb3CT4LQ4ScOtr91">
+		<p class="error">Неверный email или пароль</p>
+		<div class="popup-login-form-item">
+			<label for="email">Ваш e-mail</label>
+			<input required="required" class="input" name="email" type="text" id="email">
+		</div>
+		<div class="popup-login-form-item">
+			<label for="email">Пароль</label>
+			<input required="required" class="input" name="password" type="password" id="password">
+		</div>
+		<input name="redirect_uri" type="hidden" value="https://autoreview.ru">
+		<input name="_token" type="hidden" value="BRTPlFrvegpTgmAbSzskG6A2hb3CT4LQ4ScOtr91">
+		<div class="popup-login-form-item">
+			<input class="button" type="submit" value="Войти">
+		</div>
+		<div class="popup-login-form-item">
+			<a href="#remind" class="mp-popup-remind">Я забыл пароль</a>
+			<a href="#register" class="mp-popup-registration">У меня нет аккаунта</a>
+		</div>
+	</form>
+</div>

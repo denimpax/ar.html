@@ -1,0 +1,131 @@
+.page-subscript {
+	background: $bg;
+
+	.subscript {
+
+		h1 {
+			color: #333;
+			font: 35px $exo-r;
+			text-transform: uppercase;
+			text-align: center;
+			margin: 25px 0;
+		}
+
+		&-mess {
+			width: 90%;
+			text-align: center;
+			margin: 0 auto 29px;
+
+			&-text {
+				color: #999;
+				border-radius: 5px;
+				padding: 10px 25px;
+				background: #ececec;
+				border: 1px solid #e0e0e0;
+				display: block;
+			}
+		}
+
+		&-wrapp {
+			margin-bottom: 40px;
+
+			&-item {
+				width: 100%;
+				padding: 0 0 38px;
+				margin-bottom: 26px;
+				border-bottom: 1px solid rgba(0, 0, 0, .15);
+
+				.title {
+					color: $red-dark;
+					font: 35px/35px $exo-r;
+					text-align: center;
+				}
+
+				.text {
+					color: #000;
+					font: 16px/26px $open-r;
+					margin: 15px auto 30px;
+				}
+
+				.sbtn {
+					text-align: center;
+				}
+
+				.web-link {
+					color: $blue;
+					text-transform: uppercase;
+					text-align: center;
+					display: block;
+					text-decoration: none;
+					margin-top: 40px;
+					font: 16px/16px $exo-r;
+				}
+
+				&:last-child {
+					border-bottom: 0;
+					margin-bottom: 0;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.mailing {
+
+		&-title {
+			text-align: center;
+			font: 18px/19px $exo-r;
+			color: #666;
+			margin: 60px 0 20px;
+
+			span {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				&:before {
+					content: '';
+					width: 50px;
+					height: 1px;
+					display: block;
+					background: #ccc;
+					margin-right: 20px;
+				}
+
+				&:after {
+					content: '';
+					width: 50px;
+					height: 1px;
+					display: block;
+					background: #ccc;
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+
+	&.chat {
+
+		.club-logo {
+			position: relative;
+
+			&:before {
+				color: #878787;
+				content: $arrow-dr;
+				font: 16px $icon;
+				position: absolute;
+				top: 14px; right: -18px;
+			}
+
+			&:after {
+				color: #878787;
+				content: 'Чат';
+				font: 16px $open-r;
+				text-transform: none;
+				position: absolute;
+				top: 12px; right: -55px;
+			}
+		}
+	}
+}

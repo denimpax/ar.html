@@ -1,0 +1,263 @@
+.page-podhivka {
+	background: $bg;
+
+	.main {
+		margin-bottom: 30px;
+
+		&-head {
+			display: flex;
+			flex-direction: column;
+			margin-top: 30px;
+
+			&-title {
+
+				h1 {
+					color: #000;
+					font: 26px/26px $exo-r, sans-serif;
+					margin-bottom: 10px;
+				}
+			}
+
+			&-brew {
+				color: #999;
+				font: 12px/12px $open-r, sans-serif;
+				margin-bottom: 20px;
+
+				a {
+					color: #999;
+					text-decoration: none;
+
+					&:hover {
+						color: $red-dark;
+					}
+				}
+			}
+
+			&-sub {
+				color: #5a5a5a;
+				font: 16px/22px $open-r;
+
+				a {
+					color: $red-dark;
+					text-decoration: none;
+
+					&:hover {
+						color: $red;
+					}
+				}
+			}
+		}
+
+		&-number {
+
+			h2 {
+				color: #000;
+				font: 25px/25px $exo-r;
+				text-align: center;
+				margin: 40px 0 25px;
+
+				span {
+					border-bottom: 3px solid $red-dark;
+				}
+			}
+
+			&-wrapp {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				padding-bottom: 30px;
+				margin-bottom: -10px;
+				border-bottom: 1px solid #dfdfdf;
+
+				.item {
+					width: 210px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					color: #666;
+					font: 16px/16px $open-r, sans-serif;
+					text-decoration: none;
+					text-align: center;
+					margin-right: 10px;
+
+					img {
+						width: 210px;
+						box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+						margin-bottom: 15px;
+					}
+
+					&:last-child {
+						height: 277px;
+						background: #eee;
+
+						p {
+							color: #999;
+							font: 14px/14px $open-r;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+
+							&:before {
+								content: '>';
+								color: #ccc;
+								font: 60px $icon;
+								margin-bottom: 20px;
+								@include transition;
+							}
+						}
+					}
+				}
+
+				&:last-child {
+					border-bottom: 0;
+					padding-bottom: 0;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.page {
+		margin-bottom: 30px;
+
+		&-head {
+			display: flex;
+			flex-direction: column;
+			margin-top: 30px;
+
+			&-title {
+
+				h1 {
+					color: #000;
+					font: 26px/26px $exo-r, sans-serif;
+					margin-bottom: 10px;
+				}
+			}
+
+			&-brew {
+				color: #999;
+				font: 12px/12px $open-r, sans-serif;
+				margin-bottom: 20px;
+
+				a {
+					color: #999;
+					text-decoration: none;
+
+					&:hover {
+						color: $red-dark;
+					}
+				}
+			}
+		}
+
+		&-number {
+
+			&-wrapp {
+				display: flex;
+				flex-direction: column;
+				margin-top: 10px;
+
+				.item {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					color: #666;
+					font: 16px/16px $open-r, sans-serif;
+					text-decoration: none;
+					text-align: center;
+					margin-bottom: 20px;
+
+					img {
+						width: 280px;
+						box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+						margin-bottom: 15px;
+					}
+
+					&:hover {
+						color: $red-dark;
+					}
+				}
+			}
+		}
+	}
+
+	.more {
+		margin-bottom: 30px;
+
+		&-head {
+			display: flex;
+			margin-top: 30px;
+
+			&-title {
+
+				h1 {
+					color: #000;
+					font: 26px/26px $exo-r, sans-serif;
+					margin-bottom: 10px;
+				}
+			}
+
+			&-brew {
+				color: #999;
+				font: 12px/12px $open-r, sans-serif;
+				margin-bottom: 20px;
+
+				a {
+					color: #999;
+					text-decoration: none;
+
+					&:hover {
+						color: $red-dark;
+					}
+				}
+			}
+		}
+
+		&-wrapp {
+			margin-top: 10px;
+
+			&-num {
+				margin-bottom: 10px;
+
+				img {
+					max-width: 100%;
+					display: block;
+				}
+
+				&_content {
+					margin-bottom: 50px;
+
+					&-text {
+						text-align: center;
+						font: 20px/26px $exo-r;
+						color: #666;
+						margin-top: 25px;
+					}
+
+					&-price {
+						text-align: center;
+						margin: 20px 0 20px;
+
+						span {
+							font: 40px/40px $open-sb;
+
+							&:after {
+								content: 'r';
+								font: 30px/30px $icon;
+								display: inline-block;
+								vertical-align: top;
+								margin: 7px 0 0 10px;
+							}
+						}
+					}
+
+					.button {
+						width: 160px;
+					}
+				}
+			}
+		}
+	}
+}

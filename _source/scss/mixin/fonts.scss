@@ -1,0 +1,128 @@
+@mixin font-face($fontFamily, $path, $fileName, $svgLabel, $fontWeight: normal, $fontStyle: normal) {
+	@font-face {
+		font-family: $fontFamily;
+
+		src: url('#{$path + $fileName}.eot');
+		src: url('#{$path + $fileName}.eot?#iefix') format('embedded-opentype'),
+		url('#{$path + $fileName}.woff') format('woff'),
+		url('#{$path + $fileName}.ttf') format('truetype'),
+		url('#{$path + $fileName}.svg##{$svgLabel}') format('svg');
+
+		font-weight: $fontWeight;
+		font-style: $fontStyle;
+	}
+}
+
+// OpenSans
+$open-r:   'OpenSans';
+$open-b:   'OpenSans Bold';
+$open-i:   'OpenSans Italic';
+$open-l:   'OpenSans Light';
+$open-bi:  'OpenSans Bold Italic';
+$open-sb:  'OpenSans Semi Bold';
+$open-sbi: 'OpenSans Semi Bold Italic';
+
+@include font-face($open-r,   '../fonts/opensans/', 'OpenSans', 'OpenSans');
+@include font-face($open-b,   '../fonts/opensans/', 'OpenSans-Bold', 'OpenSans-Bold');
+@include font-face($open-i,   '../fonts/opensans/', 'OpenSans-Italic', 'OpenSans-Italic');
+@include font-face($open-l,   '../fonts/opensans/', 'OpenSans-Light', 'OpenSans-Light');
+@include font-face($open-bi,  '../fonts/opensans/', 'OpenSans-BoldItalic', 'OpenSans-BoldItalic');
+@include font-face($open-sb,  '../fonts/opensans/', 'OpenSans-Semibold', 'OpenSans-Semibold');
+@include font-face($open-sbi, '../fonts/opensans/', 'OpenSans-SemiboldItalic', 'OpenSans-SemiboldItalic');
+
+// Exo
+$exo-r: 'Exo2 Regular';
+@include font-face($exo-r, '../fonts/exo/', 'Exo2-Regular', 'Exo2-Regular');
+
+// Bebas Neue
+$bn-b:   'Bebas Neue Bold';
+@include font-face($bn-b,   '../fonts/bebas-neue/', 'BebasNeueBold', 'BebasNeueBold');
+
+// Icon
+$icon: 'icon';
+
+$user: 			 '\75'; // u
+$search: 		 '\73'; // s
+$vkontakte:  '\76'; // v
+$twitter: 	 '\74'; // t
+$instagram:  '\69'; // i
+$youtube: 	 '\79'; // y
+$facebook: 	 '\66'; // f
+$send: 			 '\71'; // q
+$rubl: 			 '\72'; // r
+$rubl-light: '\e900';
+$rubl-thin:  '\e901';
+$arrow-l: 	 '\3c'; // <
+$arrow-dr: 	 '\3e'; // >
+$crash:			 '\63'; // c
+$comment:		 '\e90a'; // C
+$pay-post:   '\70'; // p
+$forum: 		 '\46'; // F
+$reply:		   '\52'; // R
+$star: 			 '\53'; // S
+$yes: 			 '\59';
+$fire: 			 '\e91e';
+$exit: 			 '\e91d';
+$camera: 		 '\e902';
+$pdf: 			 '\e903';
+$photo: 		 '\e904';
+$upload: 		 '\e905';
+$pen: 			 '\e906';
+$add-blog: 	 '\e907';
+$add-forum:  '\e908';
+$chat: 			 '\e909';
+$comments: 	 '\e90a';
+$blog: 			 '\e90b';
+$stars: 		 '\e90c';
+$eyes: 			 '\e90d';
+$date: 			 '\e90e';
+$time: 			 '\e90f';
+$location: 	 '\e910';
+$meeting: 	 '\e911';
+$upload2: 	 '\e912';
+$att: 			 '\e913';
+$like: 			 '\e914';
+$attention:  '\e915';
+$car: 			 '\e916';
+$track: 		 '\e917';
+$future: 		 '\e918';
+$law: 			 '\e919';
+$sport: 		 '\e91a';
+$garage: 		 '\e91b';
+$technical:  '\e91c';
+$edit: 			 '\e91f';
+$garbage: 	 '\e920';
+$notify: 		 '\e921';
+$pin:				 '\e800';
+$lock:			 '\e801';
+$filter:		 '\e922';
+$pv: 				 '\e923';
+$mc: 				 '\e924';
+$megaphone:  '\e803';
+$download: 	 '\f0ed';
+$cards:		   '\e925';
+$note: 			 '\e926';
+$password: 	 '\e927';
+$usr: 			 '\e928';
+$setting: 	 '\e929';
+$dpdf: 			 '\e92a';
+$quick: 		 '\e92b';
+$microphone: '\e92c';
+$phone: 		 '\e92d';
+$gift: 			 '\e92e';
+$print:      '\e92f';
+$corp:       '\e930';
+$check: 		 '\e931';
+$no: 			   '\4e';
+$raiting:    '\e932';
+$mail:       '\e934';
+$ar:         '\e933';
+$link:       '\e935';
+$checked:    '\e938';
+
+@include font-face($icon, '../fonts/icon/', 'icon', 'icon');
+
+
+// Light gallery
+$lg: 'lg';
+@include font-face($lg, '../fonts/lg/', 'lg', 'lg');

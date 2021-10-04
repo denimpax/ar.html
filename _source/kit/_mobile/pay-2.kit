@@ -1,0 +1,48 @@
+<!-- $page-title = Оплата -->
+<!-- $page-script =
+  <script type="text/javascript" src="../static/js/mobile.js"></script>
+  <script type="text/javascript" src="../static/js/mobile/script.js"></script>
+-->
+<!-- $page-class = page-pay -->
+<!-- @import tpl/layout/head.kit -->
+<!-- @import tpl/layout/header.kit -->
+<form class="main container form">
+  <div class="main-head">
+   <div class="main-head-title">Полная подписка</div>
+   <div class="main-head-price">1590<span></span></div>
+  </div>
+ <div class="main-form">
+   <div class="main-form-select">
+     <div class="select">
+       <label>способ оплаты:</label>
+       <div class="select-control">
+         <select>
+           <option>Выберите</option>
+           <option>Выберите</option>
+           <option>Visa / Master</option>
+           <option>Яндекс.Деньги</option>
+           <option>WebMoney</option>
+           <option>Kiwi</option>
+         </select>
+       </div>
+     </div>
+     <div class="input ok">
+       <label>ПРОМОКОД:</label>
+       <input type="text" name="code" value="XXXXX">
+     </div>
+   </div>
+
+   <input type="submit" value="Подключить" class="button _blue">
+   <div class="checkbox-control-border">
+     <div class="item">
+       <label class="control">
+         включить автопродление
+         <input type="checkbox" name="checkbox-2-1" checked="checked">
+         <div class="control_indicator"></div>
+       </label>
+     </div>
+   </div>
+
+ </div>
+</form>
+<!-- @import tpl/layout/footer.kit -->

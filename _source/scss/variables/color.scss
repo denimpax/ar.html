@@ -1,0 +1,49 @@
+$red: 			 #ea1c24; // rgba(234, 28, 36, 1);
+$red-dark: 	 #e0002a; // rgba(224, 0, 42, 1);
+$red-club: 	 #bc0023; // rgba(188, 0, 35, 1);
+$red-black:  #840000; // rgba(132, 0, 0, 1);
+
+$green: 		 #00b200;
+$greenh: 		 #090;
+$yellow: 		 #ff0;
+$orange: 		 #f90;
+$arcap: 		 #d38225;
+$brown: 		 #753f2a;
+$reed: 			 #f00;
+$blue: 			 #4aa9d9;
+$blue2: 		 #5ca2f9;
+$blue2h: 		 #3b86e2;
+$blue3:      #5da2f7;
+$tr: 			   transparent;
+
+$color-fb: #3c5a98;
+$color-vk: #48729e;
+$color-tw: #00aced;
+$color-in: linear-gradient(29.61deg, #f38334 0%, #da2e7d 50.39%, #6b54c6 100%);
+$color-yt: #ab231c;
+
+$width:      #ffffff;
+$bg: 				 #f8f8f8; // site menu
+$bg2: 			 #e7e7e7;
+$gray: 			 #8d8d8d;
+$gray-dark:  #444547; // menu link
+$gray-black: #444445; // footer
+
+$fb: #3c5a98;
+$vk: #48729e;
+$tw: #00aced;
+$ok: #ee8208;
+$in: #9d7144;
+$wa: #88bb4b;
+
+@mixin rgba-bg($property, $background: transparent, $opacity: 1) {
+	#{$property}: rgba($background, $opacity);
+}
+
+@mixin rgba-cr($property, $color: transparent, $opacity: 1) {
+	#{$property}: rgba($color, $opacity);
+}
+
+@mixin brd-cr($property, $border-color: transparent, $opacity: 1) {
+	#{$property}: rgba($border-color, $opacity);
+}

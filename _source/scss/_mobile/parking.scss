@@ -1,0 +1,166 @@
+.page-parking {
+	background: $bg;
+
+	.main {
+		margin-bottom: 0;
+
+		&-head {
+			display: flex;
+			flex-direction: column;
+			margin-top: 30px;
+
+			&-title {
+
+				h1 {
+					color: #000;
+					font: 26px/26px $exo-r, sans-serif;
+					margin-bottom: 10px;
+				}
+			}
+
+			&-brew {
+				color: #999;
+				font: 12px/12px $open-r, sans-serif;
+				margin-bottom: 20px;
+
+				a {
+					color: #999;
+					text-decoration: none;
+
+					&:hover {
+						color: $red-dark;
+					}
+				}
+			}
+
+			&-sub {
+				color: #5a5a5a;
+				font: 16px/22px $open-r;
+
+				a {
+					color: $red-dark;
+					text-decoration: none;
+
+					&:hover {
+						color: $red;
+					}
+				}
+			}
+		}
+
+		&-tab {
+			margin-top: 44px;
+			position: relative;
+			z-index: 5;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 0 5px;
+
+			a {
+				color: #999;
+				font: 16px/16px $exo-r;
+				border-bottom: 2px solid #ccc;
+				text-decoration: none;
+				padding: 0 15px 10px;
+
+				&.active {
+					color: $red-dark;
+					border-color: $red-dark;
+					cursor: default;
+				}
+			}
+		}
+
+		// &-tab {
+		// 	margin-top: 44px;
+		// 	position: relative;
+		// 	z-index: 5;
+		// 	display: flex;
+		// 	flex-direction: column;
+		// 	justify-content: center;
+		// 	align-items: center;
+
+		// 	a {
+		// 		color: #999;
+		// 		font: 16px/16px $exo-r;
+		// 		border-radius: 3px;
+		// 		border: 1px solid #ccc;
+		// 		text-decoration: none;
+		// 		padding: 8px 25px 12px;
+
+		// 		&.active {
+		// 			color: #fff;
+		// 			border-color: $red-dark;
+		// 			background: $red-dark;
+		// 			cursor: default;
+		// 		}
+
+		// 		&:last-child {
+		// 			margin-top: 20px;
+		// 		}
+		// 	}
+		// }
+
+		&-wrapp {
+			padding-top: 40px;
+			background: $tr;
+
+			&-item {
+
+				ol {
+					counter-reset: ol-counter;
+
+					li {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-between;
+						position: relative;
+						border-bottom: 1px solid rgba(0,0,0,.1);
+						padding-bottom: 25px;
+						margin-bottom: 40px;
+
+						div {
+							width: 43%;
+
+							img {
+								max-width: 100%;
+							}
+
+							p {
+								color: #666;
+								font: 14px/18px $open-r;
+								text-align: center;
+								padding: 10px 5px 25px;
+							}
+
+							&:nth-of-type(2n) {
+								margin-right: 0;
+							}
+						}
+
+						&:before {
+							width: 100%;
+							content: counter(ol-counter);
+							counter-increment: ol-counter;
+							font: 30px/30px $open-r;
+							color: #ccc;
+							margin-bottom: 35px;
+							display: block;
+							text-align: center;
+						}
+
+						&:last-child {
+							border-bottom: 0;
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+
+			#tab-2 {
+				display: none;
+			}
+		}
+	}
+}

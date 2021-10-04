@@ -1,0 +1,259 @@
+.page-timeline {
+	background: $bg;
+
+	.title {
+		display: flex;
+		justify-content: space-between;
+		margin: 40px 0;
+
+		h1 {
+			font: 44px/44px $exo-r;
+		}
+
+		.sort {
+			display: flex;
+
+			&-select {
+				background: #FFFFFF;
+				box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+				border-radius: 5px;
+				padding: 20px 25px 15px 20px;
+				margin-left: 20px;
+				display: flex;
+
+				&-label {
+					font: 10px/10px $open-b;
+					text-transform: uppercase;
+				}
+
+				&:nth-of-type(2) {
+
+					.sort-select-label	{
+						flex-basis: 250px;
+					}
+				}
+			}
+
+			.select-control-default {
+				display: flex;
+
+				select {
+					color: #8e8e8e !important;
+					font: 20px/20px $open-r;
+					padding: 0 20px 0 0;
+					margin: -5px 0 0 20px;
+					box-shadow: none;
+				}
+
+				&:after {
+					top: 26px;
+				}
+			}
+		}
+	}
+
+	.content {
+		position: relative;
+		display: flex;
+		margin-bottom: 60px;
+
+		&-item {
+			display: grid;
+			grid-template-columns: 162px 14px 1fr;
+			grid-template-rows: 1fr;
+			gap: 0px 0px;
+			grid-template-areas:
+				". . .";
+				padding-bottom: 80px;
+
+			&-year {
+				font: 40px/40px $bn-b;
+				color: #d8d8d8;
+			}
+
+			&-bullit {
+				width: 10px;
+				height: 10px;
+				border: 2px solid #ccc;
+				background: $bg;
+				border-radius: 100px;
+				position: relative;
+				margin-top: 10px;
+				z-index: 2;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				&:before {
+					content: '';
+					width: 4px;
+					height: 4px;
+					display: block;
+					border-radius: 100px;
+					background: $red-club;
+				}
+			}
+
+			&-content {
+				margin-left: 47px;
+
+				.item {
+					display: flex;
+					align-items: center;
+					margin-bottom: 40px;
+
+					img {
+						height: 180px;
+						border-radius: 20px;
+					} 
+
+					&-text {
+						margin-left: 50px;
+
+						p {
+							margin: 0;
+							font: 20px/36px $open-r;
+	
+							&.title {
+								font-family: $open-sb;
+							}
+	
+							&.text {
+								line-height: 30px;
+							}
+						}
+					}
+				}
+
+				.autor {
+
+					p {
+						font: 20px/36px $open-r;
+						margin-bottom: 30px;
+					}
+
+					&-wrapp {
+						display: flex;
+						flex-wrap: wrap;
+
+						&-item {
+							flex-basis: 174px;
+							width: 174px;
+							border: 0;
+							margin-left: 40px;
+							margin-bottom: 30px;
+							text-decoration: none;
+
+							&_img {
+								width: 170px;
+								height: 170px;
+								border: 2px solid rgba(224, 0, 42, .4);
+								border-radius: 100%;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								margin-bottom: 20px;
+								@include transition;
+
+								img {
+									width: 150px;
+									height: 150px;
+									border-radius: 100%;
+									@include transition;
+									@include transform(scale(1));
+								}
+
+								&._no {
+									border-color: $tr;
+								}
+							}
+
+							&_text {
+
+								p {
+									color: #666;
+									font: 20px/26px $open-r;
+									text-align: center;
+									margin-bottom: 10px;
+								}
+
+								span {
+									font: 14px/20px $open-r;
+									color: #999;
+									display: block;
+									text-align: center;
+								}
+							}
+
+							&:hover {
+
+								.autor-wrapp-item_img {
+									border: 2px solid rgba(224, 0, 42, .2);
+									animation: pulseRed20 1500ms infinite;
+								}
+
+								._no {
+									border: 2px solid rgba(224, 0, 42, 0);
+									animation: none;
+								}
+
+								img {
+									@include transform(scale(1.06));
+								}
+							}
+
+							&:nth-of-type(1), &:nth-of-type(5n) {
+								margin-left: 0;
+							}
+						}
+					}
+				}
+
+				div {
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+
+		&:after {
+			content: '';
+			width: 2px;
+			height: 100%;
+			background: #ccc;
+			position: absolute;
+			top: 10px;
+			left: 168px;
+			z-index: 1;
+		}
+
+		&.present {
+			flex-direction: column;
+		}
+
+		&.past {
+			flex-direction: column-reverse;
+
+			.content-item {
+				&:last-child {
+					padding-bottom: 70px;
+				}
+
+				&:first-child {
+					padding-bottom: 0;
+				}
+			}
+
+			.content-item-content {
+				display: flex;
+				flex-direction: column-reverse;
+			}
+		}
+	}
+}

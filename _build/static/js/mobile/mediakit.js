@@ -1,0 +1,1 @@
+$(document).ready((function(){$(".main-head-closed").click((function(){$(this).fadeOut(),$(".main-head").slideUp()})),$(".mediakit").tabslet({mouseevent:"click",attribute:"href",animation:!1})}));

@@ -1,0 +1,111 @@
+.page-subscript {
+	background: $bg;
+
+	.subscript {
+
+		h1 {
+			color: #333;
+			font: 45px $exo-r;
+			text-align: center;
+			margin: 25px 0 35px;
+		}
+
+		&-mess {
+			text-align: center;
+			margin-bottom: 29px;
+
+			&-text {
+				width: auto;
+				color: #999;
+				border-radius: 5px;
+				padding: 10px 25px;
+				background: #ececec;
+				border: 1px solid #e0e0e0;
+				display: inline;
+			}
+		}
+
+		&-wrapp {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-bottom: 40px;
+
+			&-item {
+				width: 50%;
+				box-sizing: border-box;
+				padding: 10px 0 20px;
+
+				.title {
+					color: $red-dark;
+					font: 35px/35px $exo-r;
+					text-align: center;
+				}
+
+				.text {
+					width: 85%;
+					color: #000;
+					font: 16px/26px $open-r;
+					margin: 15px auto 30px;
+				}
+
+				.sbtn {
+					text-align: center;
+				}
+
+				.web-link {
+					color: $blue;
+					text-transform: uppercase;
+					text-align: center;
+					display: block;
+					text-decoration: none;
+					margin-top: 40px;
+					font: 16px/16px $exo-r;
+
+					&:hover {
+						color: $blue2h;
+					}
+				}
+
+				&:nth-of-type(odd) {
+					border-right: 1px solid rgba(0, 0, 0, .15);
+				}
+			}
+		}
+	}
+
+	.mailing {
+
+		&-title {
+			text-align: center;
+			font: 18px/19px $exo-r;
+			color: #666;
+			margin: 60px 0 20px;
+
+			span {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				&:before {
+					content: '';
+					width: 100px;
+					height: 1px;
+					display: block;
+					background: #ccc;
+					margin-right: 20px;
+				}
+
+				&:after {
+					content: '';
+					width: 100px;
+					height: 1px;
+					display: block;
+					background: #ccc;
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.page-error {
+	background: $bg;
+
+	.p-404 {
+
+		h1 {
+			color: rgba(0,0,0,.05);
+			font: 150px $exo-r;
+			text-align: center;
+			position: relative;
+			margin-bottom: 20px;
+
+			span {
+				width: 100%;
+				color: #000;
+				font: 15px/25px $exo-r;
+				text-align: center;
+				position: absolute;
+				top: 75px; left: 0;
+			}
+		}
+	}
+}

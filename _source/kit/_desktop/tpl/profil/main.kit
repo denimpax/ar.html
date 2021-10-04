@@ -1,0 +1,20 @@
+<div class="main container">
+	<div class="main-sidebar">
+		<div class="main-sidebar-avatar tooltip-bottom" title="Рекомендуемый<br>размер изображений:">
+			<form method="POST" action="https://autoreview.ru/profile/avatar" accept-charset="UTF-8" enctype="multipart/form-data">
+				<input name="_token" type="hidden" value="xZtZlO4Y65Of0CmLNOKZEm538wbUZHTk3Xz4joFb">
+				<input class="edit-avatar" onchange="this.form.submit()" name="avatar" type="file">
+      </form>
+      <div class="main-sidebar-avatar_overlay">Изменить<br>фото</div>
+			<img src="../static/img/avatar.jpg">
+		</div>
+		<ul id="nav" class="main-sidebar-nav">
+			<li><a href="../data/profil/desktop/profil.html" class="active">Профиль</a></li>
+			<li><a href="../data/profil/desktop/favorite.html">Избранное</a></li>
+			<li><a href="../data/profil/desktop/comments.html">Мои Комментарии</a></li>
+			<li><a href="../data/profil/desktop/note.html">Уведомления</a><span>99+</span></li>
+			<li><a href="../data/profil/desktop/setting.html">Настройки</a></li>
+		</ul>
+	</div>
+	<div id="ajax-content" class="main-content"></div>
+</div>

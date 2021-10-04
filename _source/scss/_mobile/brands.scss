@@ -1,0 +1,180 @@
+.page-brands {
+	background: $bg;
+
+	.main {
+		margin-bottom: 30px;
+
+		&-wrapp {
+			padding-top: 40px;
+
+			&-item {
+
+				h1 {
+					font: 34px/40px $exo-r;
+					margin-top: -10px;
+					margin-bottom: 40px;
+				}
+
+				form {
+					padding: 5px 20px 10px;
+					background-color: #fff;
+					margin-bottom: 28px;
+					position: relative;
+					border-radius: 5px;
+					box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+
+					input {
+
+						&[type="text"] {
+							width: 100%;
+							color: #8e8e8e;
+							font: 22px/22px $open-r;
+							border: 0;
+							padding-left: 5px 0 2px 10px;
+							position: relative;
+							z-index: 1;
+						}
+
+						&[type="submit"] {
+							font: 22px $icon;
+							border: 0;
+							background: 0;
+							position: absolute;
+							top: 10px; right: 10px;
+							opacity: .1;
+							z-index: 2;
+							@include transition;
+
+							&:hover {
+								opacity: .5;
+							}
+						}
+					}
+				}
+
+				ol {
+
+					li {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-between;
+						position: relative;
+						border-bottom: 1px solid rgba(0,0,0,.1);
+						padding-bottom: 25px;
+						margin-bottom: 40px;
+
+						a {
+							width: 43%;
+							text-decoration: none;
+
+							img {
+								max-width: 100%;
+								height: 90px;
+								display: block;
+								margin: 0 auto;
+							}
+
+							p {
+								color: #666;
+								font: 14px/18px $open-r;
+								text-align: center;
+								padding: 10px 5px 25px;
+							}
+
+							&:nth-of-type(2n) {
+								margin-right: 0;
+							}
+						}
+
+						&:before {
+							width: 100%;
+							content: attr(data-abc);
+							font: 40px/40px $open-r;
+							text-transform: uppercase;
+							color: #ccc;
+							margin-bottom: 35px;
+							display: block;
+							text-align: center;
+						}
+
+						&:last-child {
+							border: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.page {
+
+		&-title {
+			color: #000;
+	    font: 30px/30px $exo-r;
+	    margin: 24px 0 20px;
+		}
+
+		&-brew {
+			color: #999;
+			font: 12px/12px $open-r, sans-serif;
+			margin-bottom: 20px;
+
+			a {
+				color: #999;
+    		text-decoration: none;
+
+    		&:hover {
+    			color: $red-dark;
+    		}
+			}
+		}
+
+		&-brend {
+			display: flex;
+			flex-direction: column;
+  		align-items: center;
+
+			img {
+				display: block;
+				margin: 0;
+				padding: 0;
+			}
+
+			h1 {
+				font: 50px/70px $exo-r;
+
+				span {
+					color: #999;
+				}
+			}
+		}
+
+		&-tag {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 20px;
+
+			a {
+		    color: #ccc;
+				font: 16px/16px $exo-r;
+				border-radius: 3px;
+				display: block;
+				border: 1px solid #dedede;
+				text-decoration: none;
+				padding: 8px 25px 12px;
+				margin: 0 5px 10px;
+
+				&.active {
+					color: #fff;
+			    border-color: $red-dark;
+			    background: $red-dark;
+			    cursor: default;
+				}
+			}
+		}
+
+		&-grid {
+			margin: 30px 0 40px;
+		}
+	}
+}

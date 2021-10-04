@@ -1,0 +1,382 @@
+.page-anons {
+	background: $bg;
+
+	.main {
+		margin-top: 35px;
+
+		h1 {
+			color: #333;
+			text-align: center;
+
+			@include respond-to(laptop) {
+				font: 36px/35px $exo-r, sans-serif;
+				margin-bottom: 30px;
+				letter-spacing: 2px;
+			}
+
+			@include respond-to(mac) {
+				font: 44px/45px $exo-r, sans-serif;
+				margin-bottom: 30px;
+				letter-spacing: 2px;
+			}
+		}
+
+		.slider {
+
+			&-for {
+				margin-bottom: 40px;
+
+				.slick {
+
+					&-list, &-track {
+						display: flex;
+					}
+
+					&-slide {
+
+						.content {
+							width: 100%;
+							display: block;
+							position: relative;
+							background-position: center;
+	    				background-size: cover;
+							z-index: 2;
+							margin-bottom: 20px;
+						}
+
+						.wrapp {
+							display: flex;
+							align-items: flex-end;
+							justify-content: space-between;
+							position: relative;
+
+							.title {
+								color: #fff;
+								font: 37px $exo-r;
+								display: inline-block;
+								margin-top: 100px;
+								margin-left: 50px;
+								position: relative;
+								z-index: 2;
+
+								&:after {
+									content: '';
+									width: 100%;
+									height: 3px;
+									display: block;
+									margin: 15px 0 40px;
+									background: $red-dark;
+								}
+							}
+
+							.autor {
+								display: flex;
+								flex-wrap: wrap;
+								align-items: center;
+								position: relative;
+								z-index: 2;
+								margin-left: 50px;
+								margin-bottom: 90px;
+								cursor: pointer;
+
+								img {
+									width: 70px;
+									height: 70px;
+									display: block;
+									border-radius: 100%;
+									margin-right: 0;
+									border: 2px solid #fff;
+									@include transition;
+								}
+
+								p {
+									width: 150px;
+									color: #fff;
+									padding: 0 0 0 20px;
+									margin: 0;
+									font: 22px/28px $open-r;
+								}
+
+								&:hover {
+
+									img {
+										box-shadow: 0 0 100px 5px rgba(234,28,36,.5);
+									}
+								}
+							}
+
+							.note {
+								background: rgba(255,255,255,.1);
+								height: 26px;
+								padding: 5px 21px 8px 15px;
+								position: relative;
+								margin-top: 30px;
+								margin-bottom: 50px;
+								display: flex;
+								flex-wrap: wrap;
+								position: relative;
+								z-index: 2;
+
+								.ico {
+									width: 22px;
+									display: inline-block;
+									cursor: pointer;
+									margin-right: 15px;
+
+									&:before {
+										color: #fff;
+										content: $note;
+										font: 26px/0 $icon;
+										display: inline-block;
+										margin-top: 16px;
+									}
+								}
+
+								.text {
+									color: #fff;
+									font: 20px $exo-r;
+								}
+
+								a.text {
+									text-decoration: none;
+
+									&:hover {
+										color: $red-dark;
+									}
+								}
+
+								&.active {
+
+									.ico {
+
+										&:before {
+											color: $red-dark;
+										}
+									}
+								}
+
+								&:before {
+									content: '';
+									width: 0;
+									height: 0;
+									position: absolute;
+									top: 0; left: -10px;
+									border-style: solid;
+									border-width: 0 10px 40px 0;
+									border-color: transparent rgba(255,255,255,.1) transparent transparent;
+								}
+							}
+
+							&:before {
+								content: '';
+								width: 100%;
+								height: 100%;
+								display: block;
+								position: absolute;
+								top: 0; left: 0;
+								background: rgba(0,0,0,.6);
+							}
+						}
+
+						img {
+							max-width: 100%;
+							position: relative;
+							display: block;
+							margin: 0;
+							z-index: 1;
+						}
+					}
+				}
+			}
+
+			&-nav {
+				width: 90%;
+				margin: 3px auto 0;
+				position: relative;
+
+				.slick {
+
+					&-slide {
+						width: 200px;
+						margin-right: 3px;
+						position: relative;
+						overflow: hidden;
+						cursor: pointer;
+
+						img {
+							max-width: 100%;
+							@include transition;
+						}
+
+						&:before {
+							content: '';
+							width: 100%;
+							height: 100%;
+							display: block;
+							position: absolute;
+							top: 0; left: 0;
+							background-color: rgba(248,248,248,.8);
+							z-index: 2;
+							@include transition;
+						}
+
+						&:hover {
+
+							&:before {
+								background-color: rgba(248,248,248,.5);
+							}
+						}
+					}
+
+					&-current {
+
+						&:before {
+							background-color: rgba(248,248,248, 0);
+						}
+					}
+
+					&-arrow {
+						color: #999;
+						position: absolute;
+						top: 37px;
+						z-index: 3;
+						font: 40px $icon;
+						border: 0;
+						background: transparent;
+						opacity: 1;
+						@include transition;
+
+						&:hover {
+							opacity: .5;
+						}
+
+						@include respond-to(mac) {
+							top: 50px;
+						}
+					}
+
+					&-prev {
+						left: -48px;
+
+						@include transform(rotate(180deg));
+					}
+
+					&-next {
+						right: -38px;
+					}
+				}
+			}
+
+			p {
+				color: #000;
+				font: 20px/34px $open-l, sans-serif;
+				margin: 30px 80px 0;
+
+				&:last-child {
+					margin-bottom: 0;
+					padding: 0 80px;
+				}
+			}
+		}
+
+		.subscript {
+			padding: 50px 0 70px;
+			position: relative;
+
+			&-title {
+				color: #000;
+				font: 28px/38px $open-l;
+				padding-left: 150px;
+				padding-bottom: 15px;
+			}
+
+			&-wrapp {
+				background: #fff;
+				padding: 20px 20px 20px 150px;
+				margin-left: 20px;
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .05);
+
+				form {display: flex;}
+
+				input[type="text"] {
+					color: 000;
+					font: 20px/0 $open-l;
+					border-radius: 2px;
+					padding: 0 10px;
+					margin-right: 20px;
+					box-sizing: content-box;
+					border: 1px solid #f6f6f6;
+					box-shadow: inset 0 1px 5px 0 rgba(0,0,0,0.05);
+					@include placeholder(#999);
+
+					@include respond-to(laptop) {width: 590px;}
+					@include respond-to(mac) {width: 830px;}
+				}
+
+				p {
+					color: #000;
+					font: 20px/20px $open-l;
+					margin: 9px 0;
+				}
+			}
+
+			.link {
+				color: #333;
+				font: 20px/22px $exo-r;
+				display: block;
+				text-align: center;
+				margin-top: 20px;
+				text-decoration: none;
+
+				&:hover {
+					color: $red-dark;
+				}
+			}
+
+			&:before {
+				content: '';
+				width: 148px;
+				height: 138px;
+				display: block;
+				position: absolute;
+				top: 0; left: -20px;
+				background: url('../img/icon/mail.png') 0 0 no-repeat;
+				z-index: 2;
+				@include respond-to(laptop) {top: 115px;}
+				@include respond-to(mac) {top: 60px;}
+			}
+
+			&:after {
+				content: '';
+				width: 50px;
+				height: 80px;
+				display: block;
+				position: absolute;
+				top: 73px; left: -1px;
+				background: #f8f8f8;
+				z-index: 1;
+			}
+		}
+
+		.new {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			padding: 0;
+			margin-bottom: -50px;
+			position: relative;
+			z-index: 2;
+
+			img {
+				width: 500px;
+			}
+
+			p {
+				color: #333;
+				font: 42px/52px $exo-r, sans-serif;
+				margin-left: 15px;
+			}
+		}
+	}
+}

@@ -1,0 +1,148 @@
+.page-pay {
+	background: $bg;
+
+	.main {
+		margin: 50px auto;
+
+		&-head {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&-title {
+				color: #999;
+				font: 20px/20px $open-sb;
+				text-transform: uppercase;
+			}
+		
+			&-price {
+				color: #333;
+				font: 70px/70px $exo-r;
+				margin: 32px 0 33px;
+		
+				span {
+		
+					&:after {
+						content: $rubl-light;
+						font: 30px/30px $icon;
+						display: inline-block;
+						vertical-align: top;
+						margin: 33px 0 0 5px;
+					}
+				}
+			}
+		}
+
+		&-form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&-select {
+				width: 80%;
+				margin-bottom: 20px;
+
+				.input {
+					height: 36px;
+				}
+			}
+		}
+	}
+
+	.text {
+		color: #ccc;
+		font: 12px/18px $open-r;
+		margin-top: 30px;
+	}
+
+	.button {
+		width: 80%;
+	}
+
+	.checkbox-control-border {
+		width: 190px;
+		margin: 15px auto 0;
+
+		.control {
+			color: #ccc;
+			font-size: 13px;
+			padding-left: 20px;
+
+			&_indicator {
+				width: 12px;
+				height: 12px;
+				top: 3px;
+				border-color: #eee !important;
+
+				&:after {
+					width: 6px;
+					height: 6px;
+					background: #eee;
+				}
+			}
+		}
+	}
+
+	.icon {
+		width: 80px;
+		height: 80px;
+		margin: 0 auto 40px;
+		display: block;
+
+		&:before {
+			color: #dcdcdc;
+			content: $upload2;
+			font: 80px/74px $icon;
+		}
+	}
+
+	.status {
+		font: 20px/27px $exo-r;
+		text-align: center;
+	}
+
+	.otvet {
+		display: flex;
+  		align-items: center;
+		margin: 40px auto 0;
+		padding: 20px 0;
+		background: #fff;
+		text-align: left;
+		border-radius: 10px;
+		box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+
+		&.ok {
+			color: #358100;
+			background: #deffc7;
+			border: 1px solid #358100;
+
+			&:before {
+				content: $check;
+				color: #9ccd79;
+				font: 20px/20px $icon;
+				padding: 0 30px;
+			}
+		}
+
+		&.err {
+			color: #6d0013;
+			background: #ffe8ec;
+			border: 1px solid #6D0013;
+
+			&:before {
+				content: $no;
+				color: #c48b95;
+				font: 22px/22px $icon;
+				padding: 0 30px;
+			}
+		}
+
+		p {
+			font: 18px/26px $open-l;
+		}
+    }
+    
+    .flex {
+        margin-bottom: 30px;
+    }
+}

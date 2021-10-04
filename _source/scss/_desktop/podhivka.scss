@@ -1,0 +1,301 @@
+.page-podhivka {
+	background: $bg;
+
+	.main {
+		margin-bottom: 60px;
+
+		&-head {
+			display: flex;
+			margin-top: 30px;
+
+			&-title {
+
+				h1 {
+					color: #000;
+					font: 31px/31px $exo-r, sans-serif;
+					margin-bottom: 10px;
+				}
+			}
+
+			&-brew {
+				color: #999;
+				font: 12px/12px $open-r, sans-serif;
+
+				a {
+					color: #999;
+					text-decoration: none;
+
+					&:hover {
+						color: $red-dark;
+					}
+				}
+			}
+
+			&-sub {
+				color: #5a5a5a;
+				font: 16px/22px $open-r;
+				border-left: 1px solid rgba(0,0,0, .2);
+				padding-left: 45px;
+				margin-left: 40px;
+
+				a {
+					color: $red-dark;
+					text-decoration: none;
+
+					&:hover {
+						color: $red;
+					}
+				}
+			}
+		}
+
+		&-number {
+
+			h2 {
+				color: #000;
+				font: 30px/30px $exo-r;
+				text-align: center;
+				margin: 40px 0 25px;
+
+				span {
+					border-bottom: 3px solid $red-dark;
+				}
+			}
+
+			&-wrapp {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				padding-bottom: 30px;
+				margin-bottom: -10px;
+				border-bottom: 1px solid #dfdfdf;
+
+				.item {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					color: #666;
+					font: 16px/16px $open-r, sans-serif;
+					text-decoration: none;
+					text-align: center;
+
+					img {
+						width: 185px;
+						box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+						margin-bottom: 15px;
+						@include transition;
+
+						@include respond-to(mac) {
+							width: 260px;
+						}
+					}
+
+					&:hover {
+						color: $red-dark;
+
+						img {
+							box-shadow: 0 1px 30px 0 rgba(0,0,0,.2);
+						}
+					}
+
+					&:last-child {
+
+						p {
+							color: #999;
+							font: 14px/14px $open-r;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+
+							&:before {
+								content: '>';
+								color: #ccc;
+								font: 60px $icon;
+								margin-bottom: 20px;
+								@include transition;
+							}
+						}
+
+						&:hover {
+
+							p {
+
+								&:before {
+									color: $red-dark;
+								}
+							}
+						}
+					}
+				}
+
+				&:last-child {
+					border-bottom: 0;
+					padding-bottom: 0;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.page {
+		margin-bottom: 60px;
+
+		&-head {
+			display: flex;
+			margin-top: 30px;
+
+			&-title {
+
+				h1 {
+					color: #000;
+					font: 31px/31px $exo-r, sans-serif;
+					margin-bottom: 10px;
+				}
+			}
+
+			&-brew {
+				color: #999;
+				font: 12px/12px $open-r, sans-serif;
+
+				a {
+					color: #999;
+					text-decoration: none;
+
+					&:hover {
+						color: $red-dark;
+					}
+				}
+			}
+		}
+
+		&-number {
+			margin-top: 30px;
+
+			&-wrapp {
+				display: flex;
+				flex-wrap: wrap;
+
+				.item {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					color: #666;
+					font: 16px/16px $open-r, sans-serif;
+					text-decoration: none;
+					text-align: center;
+					margin: 0 15px 20px 0;
+
+					&:nth-of-type(5n) {
+						margin-right: 0;
+					}
+
+					img {
+						width: 180px;
+						box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+						margin-bottom: 15px;
+						@include transition;
+
+						@include respond-to(mac) {
+							width: 225px;
+						}
+					}
+
+					&:hover {
+						color: $red-dark;
+
+						img {
+							box-shadow: 0 1px 30px 0 rgba(0,0,0,.2);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.more {
+		margin-bottom: 60px;
+
+		&-head {
+			display: flex;
+			justify-content: space-between;
+  		align-items: center;
+			margin-top: 30px;
+
+			&-title {
+
+				h1 {
+					color: #000;
+					font: 31px/31px $exo-r, sans-serif;
+					margin-bottom: 10px;
+				}
+			}
+
+			&-brew {
+				color: #999;
+				font: 12px/12px $open-r, sans-serif;
+
+				a {
+					color: #999;
+					text-decoration: none;
+
+					&:hover {
+						color: $red-dark;
+					}
+				}
+			}
+		}
+
+		&-wrapp {
+			margin-top: 30px;
+
+			.row {
+
+				.coll {
+					position: relative;
+					margin-bottom: 10px;
+
+					&._num {
+
+						@include respond-to(laptop) {
+							width: 313px;
+						}
+
+						@include respond-to(mac) {
+							width: 393px;
+						}
+
+						img {
+							max-width: 100%;
+							display: block;
+						}
+					}
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+
+				&-wrapp {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					@include respond-to(laptop) {width: 650px;}
+					@include respond-to(mac) {width: 890px;}
+
+					.coll {
+
+						&:nth-of-type(1), &:nth-of-type(2) {
+							margin-bottom: 10px;
+						}
+					}
+				}
+
+				a {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

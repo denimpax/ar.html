@@ -1,0 +1,558 @@
+.page-guideline {
+
+  h1 {
+    font: 50px/65px $exo-r;
+    text-align: center;
+    margin: 33px 0;
+  }
+
+  h2 {
+    font: 40px/55px $exo-r;
+  }
+
+  h3 {
+    font: 30px/45px $exo-r;
+  }
+
+  ul {
+
+    &.text {
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        xmp {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    &.icons {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 30px;
+
+      li {
+        width: 100px;
+        padding: 5px 0;
+        margin: 0 0 -1px -1px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #333;
+
+        p {
+          color: #666;
+          padding-top: 5px;
+          font-size: 14px;
+        }
+
+        .icon {
+
+          &:before {
+            content: '';
+            font: 30px/30px $icon;
+          }
+
+          &.user {
+
+            &:before {
+              content: $user;
+            }
+          }
+
+          &.search {
+
+            &:before {
+              content: $search;
+            }
+          }
+
+          &.vkontakte {
+
+            &:before {
+              content: $vkontakte;
+            }
+          }
+
+          &.twitter {
+
+            &:before {
+              content: $twitter;
+            }
+          }
+
+          &.instagram {
+
+            &:before {
+              content: $instagram;
+            }
+          }
+
+          &.youtube {
+
+            &:before {
+              content: $youtube;
+            }
+          }
+
+          &.facebook {
+
+            &:before {
+              content: $facebook;
+            }
+          }
+
+          &.send {
+
+            &:before {
+              content: $send;
+            }
+          }
+
+          &.rubl {
+
+            &:before {
+              content: $rubl;
+            }
+          }
+
+          &.rubl-light {
+
+            &:before {
+              content: $rubl-light;
+            }
+          }
+
+          &.rubl-thin {
+
+            &:before {
+              content: $rubl-thin;
+            }
+          }
+
+          &.arrow-l {
+
+            &:before {
+              content: $arrow-l;
+            }
+          }
+
+          &.arrow-dr {
+
+            &:before {
+              content: $arrow-dr;
+            }
+          }
+
+          &.crash {
+
+            &:before {
+              content: $crash;
+            }
+          }
+
+          &.comment {
+
+            &:before {
+              content: $comment;
+            }
+          }
+
+          &.pay-post {
+
+            &:before {
+              content: $pay-post;
+            }
+          }
+
+          &.forum {
+
+            &:before {
+              content: $forum;
+            }
+          }
+
+          &.reply {
+
+            &:before {
+              content: $reply;
+            }
+          }
+
+          &.star {
+
+            &:before {
+              content: $star;
+            }
+          }
+
+          &.yes {
+
+            &:before {
+              content: $yes;
+            }
+          }
+
+
+          &.fire {
+
+            &:before {
+              content: $fire;
+            }
+          }
+
+          &.exit {
+
+            &:before {
+              content: $exit;
+            }
+          }
+
+          &.camera {
+
+            &:before {
+              content: $camera;
+            }
+          }
+
+          &.pdf {
+
+            &:before {
+              content: $pdf;
+            }
+          }
+
+          &.photo {
+
+            &:before {
+              content: $photo;
+            }
+          }
+
+          &.upload {
+
+            &:before {
+              content: $upload;
+            }
+          }
+
+          &.pen {
+
+            &:before {
+              content: $pen;
+            }
+          }
+
+          &.add-blog {
+
+            &:before {
+              content: $add-blog;
+            }
+          }
+
+          &.add-forum {
+
+            &:before {
+              content: $add-forum;
+            }
+          }
+
+          &.chat {
+
+            &:before {
+              content: $chat;
+            }
+          }
+
+          &.comments {
+
+            &:before {
+              content: $comments;
+            }
+          }
+
+          &.blog {
+
+            &:before {
+              content: $blog;
+            }
+          }
+
+          &.stars {
+
+            &:before {
+              content: $stars;
+            }
+          }
+
+          &.eyes {
+
+            &:before {
+              content: $eyes;
+            }
+          }
+
+          &.date {
+
+            &:before {
+              content: $date;
+            }
+          }
+
+          &.time {
+
+            &:before {
+              content: $time;
+            }
+          }
+
+          &.location {
+
+            &:before {
+              content: $location;
+            }
+          }
+
+          &.meeting {
+
+            &:before {
+              content: $meeting;
+            }
+          }
+
+          &.upload2 {
+
+            &:before {
+              content: $upload2;
+            }
+          }
+
+          &.att {
+
+            &:before {
+              content: $att;
+            }
+          }
+
+          &.like {
+
+            &:before {
+              content: $like;
+            }
+          }
+
+          &.attention {
+
+            &:before {
+              content: $attention;
+            }
+          }
+
+          &.car {
+
+            &:before {
+              content: $car;
+            }
+          }
+
+          &.track {
+
+            &:before {
+              content: $track;
+            }
+          }
+
+          &.future {
+
+            &:before {
+              content: $future;
+            }
+          }
+
+          &.law {
+
+            &:before {
+              content: $law;
+            }
+          }
+
+          &.sport {
+
+            &:before {
+              content: $sport;
+              font-size: 20px;
+            }
+          }
+
+          &.garage {
+
+            &:before {
+              content: $garage;
+            }
+          }
+
+          &.technical {
+
+            &:before {
+              content: $technical;
+            }
+          }
+
+          &.edit {
+
+            &:before {
+              content: $edit;
+            }
+          }
+
+          &.garbage {
+
+            &:before {
+              content: $garbage;
+            }
+          }
+
+          &.notify {
+
+            &:before {
+              content: $notify;
+            }
+          }
+
+          &.pin {
+
+            &:before {
+              content: $pin;
+            }
+          }
+
+          &.lock {
+
+            &:before {
+              content: $lock;
+            }
+          }
+
+          &.filter {
+
+            &:before {
+              content: $filter;
+            }
+          }
+
+          &.pv {
+
+            &:before {
+              content: $pv;
+            }
+          }
+
+          &.mc {
+
+            &:before {
+              content: $mc;
+            }
+          }
+
+          &.megaphone {
+
+            &:before {
+              content: $megaphone;
+            }
+          }
+
+          &.download {
+
+            &:before {
+              content: $download;
+            }
+          }
+
+          &.cards {
+
+            &:before {
+              content: $cards;
+            }
+          }
+
+
+
+          &.note {
+
+            &:before {
+              content: $note;
+            }
+          }
+
+          &.password {
+
+            &:before {
+              content: $password;
+            }
+          }
+
+          &.usr {
+
+            &:before {
+              content: $usr;
+            }
+          }
+
+          &.setting {
+
+            &:before {
+              content: $setting;
+            }
+          }
+
+          &.dpdf {
+
+            &:before {
+              content: $dpdf;
+            }
+          }
+
+          &.quick {
+
+            &:before {
+              content: $quick;
+            }
+          }
+
+          &.microphone {
+
+            &:before {
+              content: $microphone;
+            }
+          }
+
+          &.phone {
+
+            &:before {
+              content: $phone;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  xmp {
+    white-space: normal;
+    color: #d72b3f;
+    font-size: 14px;
+    padding: 2px 3px 1px;
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid #e1e1e8;
+    -webkit-font-variant-ligatures: none;
+    font-variant-ligatures: none;
+    tab-size: 4;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    -webkit-tab-size: 4;
+  }
+}

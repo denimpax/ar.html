@@ -1,0 +1,767 @@
+.form {
+  position: relative;
+
+  .input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 18px 18px 10px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    @include transition;
+
+    label {
+      color: #333;
+      font: 10px/0px $open-b;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    input {
+      color: #8e8e8e;
+      font: 20px/20px $open-r;
+      border: 0;
+      margin-left: -3px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+      color: #000;
+      padding: 10px;
+      margin-left: -11px;
+      border: 0;
+      font: 20px/20px $open-r;
+    }
+
+    &-error {
+      background: $width;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0px 0px 50px 20px rgba(180, 1, 34, 0.1), inset 0px 0px 0px 1px rgba(180, 1, 34, .2);
+      @include border-radius(10px);
+
+      ul {
+
+        li {
+          color: $red;
+          font: 14px/14px $open-r;
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &.ok {
+
+      &:after {
+        content: '';
+        color: #fff;
+        font: 20px/20px $open-b;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $green url('../img/svg/check.svg') center no-repeat;
+        background-size: 12px 12px;
+        border-radius: 100px;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        @include transform(translate(0, -50%) rotate(0deg));
+      }
+    }
+
+    &.error {
+
+      label {
+        color: $red-dark;
+      }
+
+      &:after {
+        content: '+';
+        color: #fff;
+        font: 20px/20px $open-b;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $red-dark;
+        border-radius: 100px;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        @include transform(translate(0, -50%) rotate(45deg));
+      }
+    }
+
+    &:focus-within {
+      box-shadow: 0 10px 35px 5px rgba(0,0,0,.1);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .password {
+
+    a {
+      font: 14px/14px $icon;
+      color: #ccc;
+      position: absolute;
+      text-decoration: none;
+      top: 34px;
+      right: 20px;
+
+      &:before {
+        content: $eyes;
+      }
+
+      &:after {
+        content: '';
+        width: 22px;
+        height: 2px;
+        display: block;
+        background: #ccc;
+        border: 2px solid #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%) rotate(-45deg));
+      }
+
+      &.active {
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .select {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 13px 18px 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+
+    label {
+      color: #333;
+      font: 10px/10px $open-b;
+      margin-bottom: -1px;
+      position: relative;
+      z-index: 2;
+      text-transform: uppercase;
+    }
+
+    &-control {
+      width: 100%;
+      position: relative;
+
+      select {
+        width: 100%;
+        color: #8e8e8e;
+        font: 20px/20px $open-r;
+        padding-left: 0;
+        margin: 3px 0 0 -5px;
+        border: 0;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0);
+        opacity: 1;
+        position: relative;
+      }
+
+      &:after {
+        content: '‹';
+        color: #999;
+        font: 30px/30px $open-r;
+        padding: 5px;
+        position: absolute;
+        top: -1px;
+        right: 0;
+        display: block;
+        background: #fff;
+        @include transform(rotate(-90deg));
+        @include transition;
+      }
+    }
+
+    &._row {
+      padding-top: 10px;
+      flex-direction: row;
+      align-items: center;
+
+      .select-control {
+        margin: 0 0 6px 10px;
+      }
+    }
+
+    &._small {
+      padding-top: 0;
+
+      label {
+        margin-bottom: -10px;
+      }
+
+      .select-control {
+        margin-bottom: -5px;
+
+        &:after {
+          top: -3px;
+        }
+      }
+     
+      select {
+        font-size: 16px;
+        list-style: 16px;
+      }
+    }
+  }
+
+  .foot {
+    display: flex;
+    align-items: center;
+
+    span {
+      color: #000;
+      margin-right: 20px;
+      font: 11px/14px $open-l;
+    }
+  }
+
+  .send {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include rgba-bg(background, $bg, .8);
+
+    p {
+       font: 40px/40px $exo-r;
+    }
+
+    span {
+      padding: 10px 0 30px;
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+}
+
+.radio-control-default {
+  margin-bottom: 40px;
+
+  .control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 18px;
+
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+
+      &:checked {
+
+        & ~ .control_indicator {
+          background: #fff;
+
+          &:after {
+            display: block;
+          }
+        }
+      }
+
+      &:disabled {
+
+        & ~ .control_indicator {
+          background: #fff;
+          opacity: .6;
+          pointer-events: none;
+
+          &:after {
+            background: #eee;
+          }
+        }
+      }
+    }
+
+    &_indicator {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background: #fff;
+      border-radius: 50%;
+      border: 0px solid #000;
+
+      &:after {
+        box-sizing: unset;
+        content: '';
+        position: absolute;
+        display: none;
+        left: 6px;
+        top: 6px;
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background: #ccc;
+      }
+    }
+
+    &:hover {
+
+      .control_indicator {
+
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.radio-control-border {
+  margin-bottom: 40px;
+
+  .control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 18px;
+
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+
+      &:checked {
+
+        & ~ .control_indicator {
+          border-color: #ccc;
+
+          &:after {
+            display: block;
+          }
+        }
+      }
+
+      &:disabled {
+
+        & ~ .control_indicator {
+          background: transparent;
+          opacity: .6;
+          pointer-events: none;
+
+          &:after {
+            background: #ccc;
+          }
+        }
+      }
+    }
+
+    &_indicator {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid #ccc;
+
+      &:after {
+        box-sizing: unset;
+        content: '';
+        position: absolute;
+        display: none;
+        left: 3px;
+        top: 3px;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background: $red;
+      }
+    }
+
+    &:hover {
+
+      .control_indicator {
+
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.radio-control-vote {
+  margin-bottom: 40px;
+
+  .control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 18px;
+
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+
+      &:checked {
+
+        & ~ .control_indicator {
+          border-color: $red-dark;
+        }
+      }
+
+      &:disabled {
+
+        & ~ .control_indicator {
+          background: transparent;
+          opacity: .6;
+          pointer-events: none;
+
+          &:after {
+            background: #ccc;
+          }
+        }
+      }
+    }
+
+    &_indicator {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      height: 12px;
+      width: 12px;
+      border-radius: 100%;
+      background: #fff;
+      border: 8px solid #eee;
+
+      @include respond-to(mobile) {
+        width: 10px;
+        height: 10px;
+        border: 6px solid #eee;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:hover {
+
+      .control_indicator {
+        @include brd-cr(border-color, $red-dark, .3);
+      }
+    }
+  }
+}
+
+.checkbox-control-default {
+  margin-bottom: 40px;
+
+  .control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 18px;
+
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+
+      &:checked {
+
+        & ~ .control_indicator {
+          background: #fff;
+
+          &:after {
+            display: block;
+          }
+        }
+      }
+
+      &:disabled {
+
+        & ~ .control_indicator {
+          background: #fff;
+          opacity: .6;
+          pointer-events: none;
+
+          &:after {
+            background: #ccc;
+          }
+        }
+      }
+    }
+
+    &_indicator {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background: #fff;
+      border-radius: 0px;
+      border: 0px solid #000;
+
+      &:after {
+        box-sizing: unset;
+        content: '';
+        position: absolute;
+        display: none;
+        left: 4px;
+        top: 4px;
+        height: 12px;
+        width: 12px;
+        border-radius: 0;
+        background: #eee;
+      }
+    }
+
+    &:hover {
+
+      .control_indicator {
+
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.checkbox-control-border {
+  margin-bottom: 40px;
+
+  .control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 18px;
+
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+
+      &:checked {
+
+        & ~ .control_indicator {
+          border-color: #ccc;
+
+          &:after {
+            display: block;
+          }
+        }
+      }
+
+      &:disabled {
+
+        & ~ .control_indicator {
+          background: transparent;
+          opacity: .6;
+          pointer-events: none;
+
+          &:after {
+            background: #ccc;
+          }
+        }
+      }
+    }
+
+    &_indicator {
+      position: absolute;
+      top: 1px;
+      left: 0;
+      height: 16px;
+      width: 16px;
+      border-radius: 2px;
+      background: #fff;
+      border: 1px solid #ccc;
+
+      &:after {
+        box-sizing: unset;
+        content: '';
+        position: absolute;
+        display: none;
+        left: 3px;
+        top: 3px;
+        height: 10px;
+        width: 10px;
+        border-radius: 0;
+        background: $red;
+      }
+    }
+
+    &:hover {
+
+      .control_indicator {
+
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.input_file-control-default {
+  width: 100%;
+  height: 35px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #efefef;
+
+  .custom-file-input {
+    width: 90%;
+    outline: none;
+    font-size: 16px;
+    margin-left: -111px;
+
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+
+    &:before {
+      color: #e6e6e6;
+			content: $photo;
+			font: 20px/32px $icon;
+      width: 42px;
+      height: 33px;
+      color: #999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      outline: none;
+      white-space: nowrap;
+      position: absolute;
+      top: 0; right: 0;
+      -webkit-user-select: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.toggle-checked {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  outline: none;
+  border-radius: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 20px;
+    top: 2px;
+    left: 2px;
+    background: #999;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);;
+    -ms-transform: scale(1.1);;
+    -o-transform: scale(1.1);;
+    transform: scale(1.1);;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  
+  &:checked {
+    background: #eee;
+    
+    &:before {
+      left: 22px;
+    }
+  }
+
+  &._min {
+    height: 16px;
+
+    &:before {
+      top: 0;
+      left: 0;
+    }
+
+    &:checked {
+      
+      &:before {
+        left: 22px;
+      }
+    }
+  }
+
+  &._gray {
+    background: #eee;
+
+    &:before {
+      background: #fff;
+    }
+
+    &:checked {
+      background: #ccc;
+    }
+  }
+
+  &._red {
+    background: #94001c;
+
+    &:before {
+      background: #fff;
+    }
+
+    &:checked {
+      background: rgba(255,255,255, .2);
+    }
+  }
+}

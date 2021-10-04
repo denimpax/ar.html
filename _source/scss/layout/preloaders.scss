@@ -1,0 +1,97 @@
+// Body blur ajax loading
+body {
+
+  &.ajax {
+
+    &-error {
+      position: relative;
+
+      &:before {
+        width: 100%;
+        content: 'При выполнении запроса произошла ошибка!';
+        color: #fff;
+        font: 14px $open-b;
+        text-align: center;
+        display: block;
+        position: fixed;
+        padding: 15px 0;
+        top: 0;
+        background: $red-dark;
+        z-index: 9000;
+      }
+
+      &:after {
+        color: #fff;
+        content: '+';
+        font: 30px $open-r;
+        position: fixed;
+        top: 5px; right: 15px;
+        z-index: 9001;
+        cursor: pointer;
+        @include transform(rotate(45deg));
+      }
+    }
+
+    &-load {
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 42px;
+        height: 42px;
+        display: block;
+        background: #fff url('../img/loader.gif') center no-repeat;
+        border-radius: 5px;
+        position: fixed;
+        top: 50%; left: 50%;
+        margin: -21px 0 0 -21px;
+        z-index: 9000;
+      }
+    }
+  }
+}
+
+
+// Loading layout
+.lLoading {
+  top: 0; right: 0; bottom: 0; left: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, .85);
+  z-index: 1000;
+
+  span {
+    width: 100px;
+    height: 100px;
+    display: block;
+
+    &:before {
+      content: $upload2;
+      color: $red-dark;
+      display: block;
+      margin: 48px 0 0 4px;
+      font: 91px/0 $icon;
+    }
+  }
+}
+
+
+// Loading block
+.loading {
+  text-align: center;
+  margin-top: 25vh;
+
+  &:before {
+    content: $upload2;
+    color: $red-dark;
+    font: 30px $icon;
+    display: block;
+  }
+}
+
+// Jquery UX
+.ui-loader {
+  display: none !important;
+}

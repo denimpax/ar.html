@@ -1,0 +1,31 @@
+.block {
+
+  &-zoom {
+    position: absolute;
+    bottom: 20px; right: 20px;
+    opacity: 0;
+    z-index: 2;
+    // transform: translate(-50%, -50%);
+    @include transition;
+
+    &:hover {
+      opacity: .8 !important;
+    }
+
+    // #leftTop {
+    //   animation: topLeft 2.5s infinite;
+    // }
+
+    // #rightTop {
+    //   animation: topRight 2.5s infinite;
+    // }
+
+    // #leftDown {
+    //   animation: downLeft 2.5s infinite;
+    // }
+
+    // #rightDown {
+    //   animation: downRight 2.5s infinite;
+    // }
+  }
+}

@@ -1,0 +1,125 @@
+.rotation{
+  animation: animationRotation linear 1.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: animationRotation linear 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: animationRotation linear 1.5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: animationRotation linear 1.5s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: animationRotation linear 1.5s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+}
+
+@keyframes animationRotation{
+  0% {
+    transform:  translate(1px,1px)  rotate(0deg) ;
+  }
+  100% {
+    transform:  translate(1px,1px)  rotate(360deg) ;
+  }
+}
+
+@-moz-keyframes animationRotation{
+  0% {
+    -moz-transform:  translate(1px,1px)  rotate(0deg) ;
+  }
+  100% {
+    -moz-transform:  translate(1px,1px)  rotate(360deg) ;
+  }
+}
+
+@-webkit-keyframes animationRotation {
+  0% {
+    -webkit-transform:  translate(1px,1px)  rotate(0deg) ;
+  }
+  100% {
+    -webkit-transform:  translate(1px,1px)  rotate(360deg) ;
+  }
+}
+
+@-o-keyframes animationRotation {
+  0% {
+    -o-transform:  translate(1px,1px)  rotate(0deg) ;
+  }
+  100% {
+    -o-transform:  translate(1px,1px)  rotate(360deg) ;
+  }
+}
+
+@-ms-keyframes animationRotation {
+  0% {
+    -ms-transform:  translate(1px,1px)  rotate(0deg) ;
+  }
+  100% {
+    -ms-transform:  translate(1px,1px)  rotate(360deg) ;
+  }
+}
+
+.rotation-infinite{
+  animation: rotationInfinite linear 3s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: rotationInfinite linear 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: rotationInfinite linear 3s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: rotationInfinite linear 3s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: rotationInfinite linear 3s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+}
+
+@keyframes rotationInfinite{
+  0% {
+    transform:  rotate(0deg) ;
+  }
+  100% {
+    transform:  rotate(360deg) ;
+  }
+}
+
+@-moz-keyframes rotationInfinite{
+  0% {
+    -moz-transform:  rotate(0deg) ;
+  }
+  100% {
+    -moz-transform:  rotate(360deg) ;
+  }
+}
+
+@-webkit-keyframes rotationInfinite {
+  0% {
+    -webkit-transform:  rotate(0deg) ;
+  }
+  100% {
+    -webkit-transform:  rotate(360deg) ;
+  }
+}
+
+@-o-keyframes rotationInfinite {
+  0% {
+    -o-transform:  rotate(0deg) ;
+  }
+  100% {
+    -o-transform:  rotate(360deg) ;
+  }
+}
+
+@-ms-keyframes rotationInfinite {
+  0% {
+    -ms-transform:  rotate(0deg) ;
+  }
+  100% {
+    -ms-transform:  rotate(360deg) ;
+  }
+}

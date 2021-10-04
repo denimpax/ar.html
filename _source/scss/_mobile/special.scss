@@ -1,0 +1,95 @@
+.page-special {
+	background: $bg;
+
+	.special {
+
+		h1 {
+			color: #333;
+			font: 35px $exo-r;
+			text-align: center;
+			margin: 25px 0;
+		}
+
+		&-wrapp {
+
+			&-item {
+				display: block;
+				position: relative;
+				color: #000;
+				text-decoration: none;
+				margin-bottom: 50px;
+
+				img {
+					max-width: 100%;
+					display: block;
+					margin-bottom: 30px;
+				}
+
+				&_text {
+					z-index: 2;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+
+					&-title {
+						font: 30px/34px $exo-r;
+						text-align: center;
+						padding: 0 30px;
+
+						&:before {
+							content: '«';
+						}
+
+						&:after {
+							content: '»';
+						}
+					}
+
+					&-text {
+						font: 20px/30px $open-l;
+						text-align: center;
+						padding: 0 30px;
+
+						&:before {
+							content: '';
+							width: 100px;
+							height: 1px;
+							display: block;
+							margin: 25px auto 20px;
+							background-color: #000;
+						}
+					}
+
+					&-link {
+						font: 12px/12px $open-b;
+						text-transform: uppercase;
+						letter-spacing: .1em;
+						margin: 40px 0 0;
+						position: relative;
+
+						span {
+							position: relative;
+							z-index: 3;
+						}
+
+						&:after {
+							content: '';
+							width: 100%;
+							height: 4px;
+							padding: 0 5px;
+							display: block;
+							background-color: $red-dark;
+							position: absolute;
+							bottom: 0px;
+							left: 50%;
+							z-index: 1;
+							transform: translate(-50%, 0);
+							@include transition;
+						}
+					}
+				}
+			}
+		}
+	}
+}

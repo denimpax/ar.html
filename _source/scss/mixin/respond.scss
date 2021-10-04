@@ -1,0 +1,75 @@
+$mobile: 320px;
+$mob-small: 340px;
+$mob-normal: 380px;
+$mob-large: 400px;
+$tablet: 768px;
+$small: 960px;
+$large: 1200px;
+$extra-large: 1600px;
+
+
+@mixin respond-to($media) {
+
+  @if $media == laptop {
+    @media only screen and (max-width: $large - 1) { @content; }
+  }
+
+  @else if $media == desktop {
+    @media only screen and (min-width: $small + 1) and (max-width: $large - 1) { @content; }
+  }
+
+  @else if $media == mac {
+    @media only screen and (min-width: $large + 1) { @content; }
+  }
+
+  @else if $media == pc {
+    @media only screen and (min-width: $large) and (max-width: $extra-large -1) { @content; }
+  }
+
+  @else if $media == hover {
+    @media only screen and (min-width: $small) { @content; }
+  }
+
+  @else if $media == extra {
+    @media only screen and (min-width: $extra-large + 1) { @content; }
+  }
+
+  @else if $media == mob-small-max {
+    @media only screen and (max-width: $mob-small) { @content; }
+  }
+
+  @else if $media == mob-large-max {
+    @media only screen and (max-width: $mob-large) { @content; }
+  }
+
+  @else if $media == mob-large-min {
+    @media only screen and (min-width: $mob-small + 1) { @content; }
+  }
+
+  @else if $media == mob-large-min-plus {
+    @media only screen and (min-width: $mob-large + 1) { @content; }
+  }
+
+  @else if $media == mob-normal {
+    @media only screen and (max-width: $mob-normal) { @content; }
+  }
+
+  @else if $media == mob-min {
+    @media only screen and (max-width: $mob-large - 1) { @content; }
+  }
+
+  @else if $media == mobile {
+    @media only screen and (max-width: $small - 1) { @content; }
+  }
+
+  @else if $media == tablet {
+    @media only screen and (max-width: $tablet - 1) { @content; }
+  }
+}
+
+// .block {
+// 	background: #ccc;
+// 	@include respond-to(handhelds) {background: #f0f;}
+// 	@include respond-to(medium-screens) {background: #0ff;}
+// 	@include respond-to(wide-screens) {background: #00f;}
+// }​

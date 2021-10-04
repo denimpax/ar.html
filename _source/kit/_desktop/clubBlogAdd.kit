@@ -1,0 +1,20 @@
+<!-- $page-title = Сиздать историю — Клуб -->
+<!-- $page-script =
+  <script type="text/javascript" src="../static/js/desktop.js"></script>
+  <script type="text/javascript" src="../static/js/desktop/club.js"></script>
+  <script type="text/javascript" src="../static/js/desktop/script.js"></script>
+-->
+<!-- $page-class = page-club -->
+<!-- @import tpl/layout/head.kit -->
+<!-- @import tpl/layout/header.kit -->
+<!-- @import tpl/club/menu-nb.kit -->
+<!-- @import tpl/club/blog-add.kit -->
+<!-- @import tpl/layout/anons.kit -->
+<!-- @import tpl/layout/footer.kit -->
+
+<script type="text/javascript" src="../static/js/plugin/limit.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#limit').limit('150','#charsLeft');
+  });
+</script>

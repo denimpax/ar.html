@@ -1,0 +1,200 @@
+.page-authorization {
+  @include gradient-diogonal-up($red-club, $red-dark);
+
+  .container {
+    display: grid;
+    grid-template-columns: 550px 1fr;
+    height: 100vh;
+
+    .item {
+      width: 550px;
+      background: $bg;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 40px 0;
+
+      .form {
+
+        .input {
+          width: 450px;
+        }
+  
+        .footer {
+          width: 485px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 20px;
+  
+          .repass {
+            color: #000;
+            font: 10px/10px $open-b;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            text-decoration: none;
+  
+            &:hover {
+              color: $red-dark;
+            }
+          }
+
+          &._center {
+            justify-content: center;
+          }
+        }
+      }
+
+      .social {
+        margin-top: 40px;
+
+        &-title {
+          font: 16px/16px $open-r;
+        }
+
+        &-wrapp {
+
+          &-item {
+            display: flex;
+            justify-content: center;
+            
+            a {
+              font: 20px/20px $icon;
+              text-decoration: none;
+              color: #000;
+              width: 48px;
+              height: 48px;
+              border: 1px solid #000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 20px 10px 0;
+              border-radius: 100%;
+
+              &.vk {
+
+                &:hover {
+                  color: $vk;
+                  border-color: $vk;
+                }
+              }
+
+              &.fb {
+
+                &:hover {
+                  color: $fb;
+                  border-color: $fb;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .if {
+        width: 485px;
+        margin-top: 50px;
+        text-align: center;
+
+        &-title {
+          font: 16px/16px $open-r;
+          margin-bottom: 40px;
+          position: relative;
+
+          &:before {
+            content: '';
+            width: 210px;
+            height: 1px;
+            display: block;
+            background: rgba(0,0,0,.3);
+            position: absolute;
+            top: 8px;
+            left: 0;
+          }
+
+          &:after {
+            content: '';
+            width: 210px;
+            height: 1px;
+            display: block;
+            background: rgba(0,0,0,.3);
+            position: absolute;
+            top: 8px;
+            right: 0;
+          }
+        }
+      }
+
+      .text {
+        width: 485px;
+        margin-top: 30px;
+
+        p {
+          font: 14px/18px $open-l;
+
+          a {
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px solid $red-dark;
+
+            &:hover {
+              color: $red-dark;
+              border-color: $bg;
+            }
+          }
+        }
+      }
+
+      &:before {
+        content: '';
+        width: 1000%;
+        height: 100%;
+        display: block;
+        background-color: $bg;
+        position: absolute;
+        top: 0;
+        left: -1000%;
+      }
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      svg {
+        position: relative;
+        z-index: 2;
+      }
+
+      &:before {
+        content: '';
+        width: 350px;
+        height: 350px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        border-radius: 100%;
+        z-index: 1;
+        opacity: .3;
+        @include blur(300px);
+      } 
+    }
+  }
+
+  .closed {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 1;
+  }
+}

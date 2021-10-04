@@ -1,0 +1,37 @@
+{
+  "name": "covervid",
+  "main": "covervid.js",
+  "homepage": "http://stefanerickson.github.io/covervid",
+  "authors": [
+    "Stefan Erickson"
+  ],
+  "description": "Make your HTML5 video behave like a background cover image with this lightweight Javascript plugin / jQuery extension",
+  "keywords": [
+    "video",
+    "background",
+    "covervid",
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "assets",
+    "index.html",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "_release": "2b462f9237",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "2b462f92378427d19891f544ff12c237254c4cd8"
+  },
+  "_source": "https://github.com/stefanerickson/covervid.git",
+  "_target": "*",
+  "_originalSource": "covervid",
+  "_direct": true
+}

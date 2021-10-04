@@ -1,0 +1,1 @@
+function test(e){let t=document.querySelectorAll(".content"),o=["present","past"];for(let n=0;n<t.length;++n)t[n].className="content "+o[e.selectedIndex]}$(document).ready((function(){$("body").on("click",".sort-show",(function(){$(this).toggleClass("_show"),$(".sort-wrapper").slideToggle()}))}));

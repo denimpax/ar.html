@@ -1,0 +1,1 @@
+function test(e){let t=document.querySelectorAll(".content"),n=["present","past"];for(let c=0;c<t.length;++c)t[c].className="content "+n[e.selectedIndex]}$(document).ready((function(){}));

@@ -1,0 +1,89 @@
+@media only screen and (min-width: 960px) and (max-width: 1200px) {
+
+  // Microsoft Internet Explorer (10+)
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .anons-text {
+      margin-right: -100px;
+    }
+  }
+
+  // Mozzila Firefox (1.5+)
+  @-moz-document url-prefix() {
+
+    header .menu-left-item {
+      margin-top: 4px !important;
+    }
+
+    .page-shanhai_2017 .news.hit h2:before {
+      bottom: -10px !important;
+    }
+
+    .page-shanhai_2017 .news.china h2:before {
+      bottom: 23px !important;
+    }
+
+    .anons-text {
+      margin-right: -100px;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1920px) {
+
+  @-moz-document url-prefix() {
+
+    header .menu-left-item {
+      margin-top: 4px !important;
+    }
+
+    .page-shanhai_2017 .news.hit h2:before {
+      bottom: -10px !important;
+    }
+
+    .page-shanhai_2017 .news.china h2:before {
+      bottom: 23px !important;
+    }
+
+    .anons {
+
+      .container {
+
+        &:before {
+          left: 403px !important;
+        }
+
+        &:after {
+          right: 472px !important;
+        }
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix() {
+  .input_file-control-default {
+    &:before {
+      color: #e6e6e6;
+			content: $photo;
+			font: 20px/32px $icon;
+      width: 42px;
+      height: 33px;
+      color: #999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      outline: none;
+      white-space: nowrap;
+      position: absolute;
+      top: 0; right: 0;
+      -webkit-user-select: none;
+      cursor: pointer;
+    }
+  }
+
+  .custom-file-input {
+   margin-left: -80px !important;
+  }
+}

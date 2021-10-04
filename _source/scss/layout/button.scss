@@ -1,0 +1,250 @@
+.button {
+  height: 42px;
+  color: #fff;
+  font: 14px/14px $open-r !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .2px;
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #ccc;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 49px;
+  @include transition;
+
+  @include respond-to(mobile) {
+    width: 100%;
+    text-align: center;
+    line-height: 41px !important;
+    padding: 0;
+    display: block !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  @include respond-to(hover) {
+    &:hover {
+      color: #fff;
+      background: #999;
+    }
+  }
+
+  &._red {
+    background: $red-dark;
+
+    &:after {
+      color: #fff;
+    }
+
+    @include respond-to(hover) {
+      &:hover {
+        color: #fff;
+        background: $red-club;
+      }
+    }
+  }
+
+  &._blue {
+    background: $blue2;
+
+    &:after {
+      color: #fff;
+    }
+
+    @include respond-to(hover) {
+      &:hover {
+        color: #fff;
+        background: $blue2h;
+      }
+    }
+  }
+
+  &._green {
+    background: $green;
+
+    &:after {
+      color: #fff;
+    }
+
+    @include respond-to(hover) {
+      &:hover {
+        color: #fff;
+        background: $greenh;
+      }
+    }
+  }
+
+  &._gray {
+    color: #a8a8a8;
+    background: #dbdbdb;
+
+    &:after {
+      color: #a8a8a8;
+    }
+
+    @include respond-to(hover) {
+      &:hover {
+        color: #a8a8a8;
+        background: #c8c8c8;
+      }
+    }
+  }
+
+  &._grays {
+    color: #c7c7c7;
+    background: #ededed;
+
+    &:after {
+      color: #c7c7c7;
+    }
+
+    @include respond-to(hover) {
+      &:hover {
+        color: #a8a8a8;
+        background: #c8c8c8;
+      }
+    }
+  }
+
+  &._gray-light {
+    color: #555;
+    background: #f7f7f7;
+
+    &:after {
+      color: #555;
+    }
+
+    @include respond-to(hover) {
+      &:hover {
+        color: #555;
+        background: #e7e7e7;
+      }
+    }
+  }
+
+  &._dark {
+    background: #363636;
+
+    &:after {
+      color: #363636;
+    }
+
+    @include respond-to(hover) {
+      &:hover {
+        color: #fff;
+        background: #676767;
+      }
+    }
+  }
+
+  &._border {
+    color: #999;
+    border: 2px solid #999;
+    background: $tr;
+    padding: 0 47px;
+    box-sizing: border-box;
+
+    &:after {
+      color: #999;
+    }
+
+    &._light {
+      border: 1px solid #ccc;
+
+      &._red {
+        background: $tr;
+        color: $red-dark;
+        border-color: $red-dark;
+
+        &:hover {
+          color: $red-club;
+          border-color: $red-club;
+        }
+      }
+
+      &._black {
+        background: $tr;
+        color: #000;
+        border-color: #000;
+
+        &:hover {
+          color: $red-club;
+          border-color: $red-club;
+        }
+      } 
+    }
+
+    &._gray {
+      color: #ccc;
+      border: 2px solid #ccc;
+
+      &:after {
+        color: #ccc;
+      }
+    }
+
+    &._white {
+      color: #fff;
+      border-color: #fff;
+
+      &:after {
+        color: #fff;
+      }
+    }
+
+    @include respond-to(mobile) {
+      width: 100%;
+      text-align: center;
+      line-height: 41px !important;
+      padding: 0;
+      display: block !important;
+      margin-right: auto !important;
+      margin-left: auto !important;
+    }
+
+    @include respond-to(hover) {
+      &:hover {
+        color: $red;
+        border-color: $red;
+        background: $tr;
+      }
+    }
+
+  }
+
+  &._small {
+    height: 29px;
+    font-size: 14px;
+    padding: 0 19px;
+  }
+
+  &._loading {
+    color: $tr;
+    position: relative;
+
+    &:after {
+      width: 16px;
+      height: 15px;
+      color: #fff;
+      content: $upload2;
+      font: 16px/13px $icon;
+      position: absolute;
+      left: 50%;
+      margin-left: -8px;
+      animation: animationRotation linear 2s infinite;
+    }
+  }
+
+  &:disabled, &._disabled {
+    pointer-events: none;
+    opacity: .3;
+    cursor: default;
+  }
+
+  &:focus {
+    color: #fff;
+  }
+}

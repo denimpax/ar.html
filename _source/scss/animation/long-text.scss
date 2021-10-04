@@ -1,0 +1,30 @@
+.long-text {
+
+  &:hover {
+    white-space: nowrap;
+    -webkit-animation: animate-long-text 4s infinite;
+    animation: animate-long-text 4s infinite;
+    animation-direction: alternate-reverse;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    position: absolute;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@-webkit-keyframes animate-long-text{
+  from {
+    left: -100%;
+  } to {
+    left: 0;
+  }
+}
+
+@keyframes animate-long-text{
+  from {
+    left: -100%;
+  } to {
+    left: 0;
+  }
+}

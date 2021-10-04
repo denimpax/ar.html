@@ -1,0 +1,52 @@
+<div class="popup-registration">
+	<div class="popup-registration-nav">
+		<a href="#login" class="mp-popup-login">Вход</a>
+		<a href="#register" class="mp-popup-registration active">Регистрация</a>
+	</div>
+	<form method="POST" action="https://autoreview.ru/register" accept-charset="UTF-8" class="popup-registration-form">
+		<input name="_token" type="hidden" value="BRTPlFrvegpTgmAbSzskG6A2hb3CT4LQ4ScOtr91">
+		<p class="error">Хьюстон, у нас проблемы!</p>
+		<div class="popup-registration-form-item">
+			<label for="firstname">Имя</label>
+			<input required="required" class="input" name="firstname" type="text" id="firstname">
+		</div>
+		<div class="popup-registration-form-item">
+			<label for="lastname">Фамилия</label>
+			<input required="required" class="input" name="lastname" type="text" id="lastname">
+		</div>
+		<div class="popup-registration-form-item">
+			<label for="login">Логин</label>
+			<input required="required" class="input" name="login" type="text" id="login">
+		</div>
+		<div class="popup-registration-form-item">
+			<label for="email">Ваш e-mail</label>
+			<input required="required" class="input" name="email" type="text" id="email">
+		</div>
+		<div class="popup-registration-form-item">
+			<label for="email">Пароль</label>
+			<input required="required" class="input" name="password" type="password" id="password">
+		</div>
+		<div class="popup-registration-form-item">
+			<label for="password_retry">Повтор пароля</label>
+			<input required="required" class="input" name="password_retry" type="password" value="" id="password_retry">
+		</div>
+		<div class="popup-registration-form-item">
+			<label for="auto">Ваш автомобиль</label>
+			<div class="two">
+				<input class="input" placeholder="Марка" name="auto" type="text" id="auto">
+				<input id="model" class="input" placeholder="Модель" name="model" type="text">
+			</div>
+		</div>
+		<input name="redirect_uri" type="hidden" value="https://autoreview.ru">
+		<input name="_token" type="hidden" value="BRTPlFrvegpTgmAbSzskG6A2hb3CT4LQ4ScOtr91">
+		<div class="popup-registration-form-item">
+			<input class="button" type="submit" value="Зарегистрироваться">
+		</div>
+		<div class="popup-registration-form-item">
+			<p>Нажимая на кнопку «Зарегистрироваться», вы подтверждаете свое согласие с условиями <a href="">пользовательского соглашения</a></p>
+		</div>
+		<div class="popup-registration-form-item">
+			<a href="#login" class="mp-popup-login">У меня уже есть аккаунт</a>
+		</div>
+	</form>
+</div>

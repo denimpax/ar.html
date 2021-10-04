@@ -1,0 +1,461 @@
+.article {
+	position: relative;
+	cursor: pointer;
+	margin-bottom: 10px;
+
+	&-content {
+		background: #fff;
+		padding: 5px 10px;
+		box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+
+		.label {
+			color: $red-dark;
+			font: 10px/10px $open-l;
+			text-transform: uppercase;
+			padding: 3px 5px 3px;
+			letter-spacing: .1em;
+			display: inline-block;
+			text-decoration: none;
+			border: 1px solid $red-dark;
+		}
+
+		.title {
+			color: #000;
+			font-family: $exo-r;
+			line-height: 22px;
+			padding-top: 9px;
+			padding-bottom: 10px;
+			display: block;
+			text-decoration: none;
+		}
+
+		.info {
+			color: #888;
+			font: 14px/14px $open-r;
+			margin-bottom: 0;
+
+			&-date {
+				display: inline-block;
+				position: relative;
+
+				&:after {
+					content: '•';
+					font: 18px/18px Arial;
+					display: inline-block;
+					vertical-align: top;
+					margin-left: 5px;
+				}
+			}
+
+			&-commnets {
+				color: #888;
+				display: inline-block;
+				margin-left: 3px;
+				text-decoration: none;
+
+				&:before {
+					content: $blog;
+					font: 12px/17px $icon;
+					display: inline-block;
+					vertical-align: top;
+					margin-right: 5px;
+				}
+			}
+
+			&-ppost {
+				font: 19px/0 $icon;
+				margin: 7px 0 0 7px;
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+	}
+
+	img {
+		max-width: 100%;
+		display: block;
+		margin: 0;
+		padding: 0; 
+		position: relative;
+		z-index: 1;
+	}
+
+	&.img {
+		overflow: hidden;
+
+		.article-content {
+			background: transparent;
+			padding: 0;
+			position: absolute;
+			bottom: 10px; left: 10px; right: 4px;
+			box-shadow: 0 1px 1px 0 rgba(0,0,0,0);
+			z-index: 3;
+		}
+
+		.label {
+			color: #fff;
+			border-color: rgba(255,255,255,.4);
+		}
+
+		.title {
+			color: #fff;
+			text-shadow: 0 2px 2px rgba(0, 0, 0, .25);
+		}
+
+		.info {
+			color: #999;
+
+			&-commnets {
+				color: #999;
+			}
+		}
+
+		&:after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute;
+			top: 0; left: 0;
+			z-index: 2;
+			background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+			background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+			background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+		}
+	}
+}
+
+.sticker {
+	top: 0; right: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	position: absolute;
+	z-index: 11;
+
+	&-item {
+		color: rgba(255, 255, 255, .9);
+		display: none;
+		margin-right: -6px;
+		position: relative;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+		cursor: pointer;
+
+		&.pen {
+
+			&:before {
+				content: $pen;
+			}
+		}
+
+		&.video {
+
+			&:before {
+				content: $pv;
+			}
+		}
+
+		&.foto {
+
+			&:before {
+				content: $photo;
+			}
+		}
+
+		&.pdf {
+
+			&:before {
+				content: $pdf;
+			}
+		}
+
+		&.upload {
+
+			&:before {
+				content: $upload;
+			}
+		}
+
+		&.cont {
+
+			&:before {
+				content: $mc;
+			}
+		}
+
+		&.microphone {
+
+			&:before {
+				content: $microphone;
+			}
+		}
+
+		&.stk-more {
+			color: rgba(255, 255, 255, .9);
+			position: relative;
+			opacity: 1;
+			cursor: pointer;
+			display: block !important;
+
+			&:before {
+				content: '...';
+				display: block;
+				position: absolute;
+				top: 0; left: 0;
+				opacity: 1;
+			}
+
+			&:after {
+				content: '+';
+				display: block;
+				position: absolute;
+				top: 0; left: 0;
+				opacity: 0;
+				@include transform(rotate(0deg));
+			}
+
+			&.open {
+
+				&:before {
+					opacity: 0;
+				}
+
+				&:after {
+					opacity: 1;
+					@include transform(rotate(135deg));
+				}
+			}
+		}
+
+		&.active {
+			display: flex;
+		}
+
+		&:before {
+			content: '';
+			font-family: $icon;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:first-child {
+			display: flex;
+		}
+	}
+
+	&.big {
+		top: 10px; right: 10px;
+
+		.sticker-item {
+			width: 50px;
+			height: 50px;
+			border-radius: 100% 0 100% 100%;
+			background: rgba(188, 0, 35, .9);
+			z-index: 1;
+			@include transform(scale(1));
+			@include transition;
+
+			&.pen {
+				font-size: 24px;
+			}
+
+			&.video {
+				font-size: 18px;
+
+				&:before {
+					top: 26px;
+					left: 27px;
+				}
+			}
+
+			&.foto {
+				font-size: 16px;
+			}
+
+			&.pdf {
+				font-size: 12px;
+			}
+
+			&.cont {
+				font-size: 24px;
+				
+				&:before {
+					top: 28px;
+					left: 26px;
+				}
+			}
+
+			&.upload {
+				font-size: 18px;
+			}
+
+			&.microphone {
+				font-size: 20px;
+			}
+
+			&.stk-more {
+
+				&:before {
+					font: 41px/0px $open-b;
+					letter-spacing: -2px;
+					top: 11px; left: 24px;
+				}
+
+				&:after {
+					font: 42px/0 $open-r;
+					top: 26px; left: 14px;
+				}
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&:hover {
+				z-index: 2;
+				@include transform(scale(1.05));
+				@include transition;
+				background: rgba(188, 0, 35, 1);
+			}
+		}
+	}
+
+	&.small {
+		top: 5px; right: 5px;
+
+		.sticker-item {
+			width: 30px;
+			height: 30px;
+			margin-right: -3px;
+			border-radius: 100% 0 100% 100%;
+			background: rgba(188, 0, 35, .9);
+			z-index: 1;
+			@include transform(scale(1));
+			@include transition;
+
+			&.pen {
+				font-size: 16px;
+			}
+
+			&.video {
+				font-size: 12px;
+
+				&:before {
+					left: 16px;
+				}
+			}
+
+			&.foto {
+				font-size: 12px;
+			}
+
+			&.pdf {
+				font-size: 8px;
+			}
+
+			&.cont {
+				font-size: 16px;
+
+				&:before {
+					top: 16px;
+					left: 16px;
+				}
+			}
+
+			&.microphone {
+				font-size: 14px;
+			}
+
+			&.upload {
+				font-size: 12px;
+			}
+
+			&.stk-more {
+
+				&:before {
+					font: 26px/0px $open-b;
+					letter-spacing: -2px;
+					top: 6px; left: 14px;
+				}
+
+				&:after {
+					font: 30px/0 $open-r;
+					top: 15px; left: 7px;
+				}
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&:hover {
+				z-index: 2;
+				@include transform(scale(1.05));
+				@include transition;
+				background: rgba(188, 0, 35, 1);
+			}
+		}
+	}
+
+	&.border {
+
+		.sticker-item {
+			width: 35px;
+			height: 35px;
+			box-sizing: content-box;
+			border: 1px solid rgba(255, 255, 255, .8);
+
+			&.pen {
+				font-size: 22px;
+			}
+
+			&.video {
+				font-size: 16px;
+			}
+
+			&.foto {
+				font-size: 15px;
+			}
+
+			&.pdf {
+				font-size: 10px;
+			}
+
+			&.cont {
+				font-size: 22px;
+
+				&:before {
+					margin: 3px 0 0 1px;
+				}
+			}
+
+			&.microphone {
+				font-size: 16px;
+			}
+
+			&.upload {
+				font-size: 18px;
+			}
+
+			&.stk-more {
+
+				&:before {
+					font: 32px/0px $open-b;
+					letter-spacing: -2px;
+					top: 9px; left: 6px;
+				}
+
+				&:after {
+					font: 40px/0 $open-r;
+					top: 19px; left: 7px;
+				}
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}

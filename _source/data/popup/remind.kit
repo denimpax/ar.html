@@ -1,0 +1,20 @@
+<div class="popup-remind">
+	<div class="popup-remind-title">Восстановление пароля</div>
+	<form method="POST" action="https://autoreview.ru/profile/reminder" accept-charset="UTF-8" class="popup-remind-form">
+		<input name="_token" type="hidden" value="BRTPlFrvegpTgmAbSzskG6A2hb3CT4LQ4ScOtr91">
+		<p>Ссылка для восстановления пароля будет выслана на указанный e-mail.</p>
+		<!-- <p class="error">Пользователь не найден</p> -->
+		<div class="popup-remind-form-item">
+			<label for="email">Ваш e-mail</label>
+			<input required="required" class="input" name="email" type="text" id="email">
+		</div>
+		<input name="redirect_uri" type="hidden" value="https://autoreview.ru">
+		<input name="_token" type="hidden" value="BRTPlFrvegpTgmAbSzskG6A2hb3CT4LQ4ScOtr91">
+		<div class="popup-remind-form-item">
+			<input class="button" type="submit" value="Отправить">
+		</div>
+		<div class="popup-remind-form-item">
+			<a href="#remind" class="mp-popup-login">Назад</a>
+		</div>
+	</form>
+</div>
